@@ -14,5 +14,6 @@ fn main() {
         *calories.last_mut().unwrap() += parsed_val;
     }
     calories.sort();
-    println!("{:?}", calories.drain(calories.len() - 3..).sum::<u32>());
+    println!("Part 1: {}", calories.last().unwrap());
+    println!("Part 2: {}", calories.drain(calories.len() - 3..).sum::<u32>());
 }
